@@ -1,5 +1,12 @@
 # Ignore Python cache files and directories
 __pycache__/
 
-# Ignore Enviromental Variables
+# Ignore Environmental Variables
 .env
+
+# Virtual Environment
+myenv/
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
