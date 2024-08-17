@@ -17,10 +17,11 @@ ocula_technical_exercise/
 ├── app/
 │   ├── __init__.py
 │   ├── main.py            # FastAPI application and API endpoint definitions
-│   └── weather.py         # Functions to fetch and process weather data
+│   └── weather.py         # Functions to get and process weather data
+│   └── models.py          # API Response Schemas
 ├── tests/
 │   ├── __init__.py
-│   └── test_weather.py    # Unit tests for the API endpoints
+│   └── test_weather.py    # Tests for the API endpoints
 ├── .gitignore             # Ignore unnecessary files in version control
 ├── README.md              # Project documentation
 ├── requirements.txt       # Python dependencies
