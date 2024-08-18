@@ -5,7 +5,7 @@ This project is a FastAPI-based web application that retrieves weather data for 
 
 ## Features
 
-- **GET /weather**: Retrieve weather data (minimum, maximum, average temperature, and humidity) for a specified city.
+- **GET /weather**: Retrieve weather data (minimum, maximum, average temperature, and humidity) for a specified city and day.
 - **Environment Variable Configuration**: The API key for OpenWeatherMap is securely managed through environment variables.
 - **Unit Testing**: The application includes unit tests to ensure the functionality of the API endpoints.
 
