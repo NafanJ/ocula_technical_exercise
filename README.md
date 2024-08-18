@@ -12,9 +12,9 @@ This project is a FastAPI-based web application that retrieves weather data for 
 ## Live Demo
 A live version of this API is deployed on AWS Elastic Beanstalk.
 ### Example Usage
-To get the weather data for London on 19th August 2024:
+To get the weather data for London on 24th August 2024:
 ```bash
-http://openweathermap-env.eba-2jrahwga.us-east-1.elasticbeanstalk.com/weather?city=London&target_date=2024-08-19
+http://openweathermap-env.eba-2jrahwga.us-east-1.elasticbeanstalk.com/weather?city=London&target_date=2024-08-24
 ```
 
 ## Project Structure
