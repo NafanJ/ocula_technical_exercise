@@ -66,7 +66,7 @@ def get_weather_data(city: str, target_date: str):
             humidity = round(entry['humidity'], 1)
             break
     else:
-        raise ValueError("No matching data found for the specified date")
+        raise ValueError("No matching data found for the specified date (7 day max forecast)")
 
     return {
         "min_temp": min_temp,
