@@ -22,6 +22,9 @@ http://openweathermap-env.eba-2jrahwga.us-east-1.elasticbeanstalk.com/weather?ci
 ```
 ocula_technical_exercise/
 │
+├── .github/
+│   ├── workflows/
+│      ├── weather-app.yml # Github Actions CI/CD
 ├── app/
 │   ├── __init__.py
 │   ├── main.py            # FastAPI application and API endpoint definitions
@@ -31,6 +34,7 @@ ocula_technical_exercise/
 │   ├── __init__.py
 │   └── test_weather.py    # Tests for the API endpoints
 ├── .gitignore             # Ignore unnecessary files in version control
+├── Procfile               # ElasticBeanstalk FastAPI Configuration
 ├── README.md              # Project documentation
 ├── requirements.txt       # Python dependencies
 └── .env                   # Environment variables (not included in version control)
