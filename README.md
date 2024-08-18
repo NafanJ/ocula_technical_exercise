@@ -86,12 +86,16 @@ The application will be available at `http://127.0.0.1:8000`.
 
 ### API Usage
 
-- **GET /weather**: Retrieve weather data for a specific city.
+- **GET /weather**: Retrieve weather data for a specific city on a date.
+  **Query Parameters:**
+  - `city` (required): The name of the city for which you want to retrieve weather data.
+  - `target_date` (required): The date for which you want to retrieve weather data in the format `YYYY-MM-DD`.
+
 
   **Example Request:**
 
   ```
-  GET /weather?city=London
+  GET /weather?city=London&target_date=2024-08-19
   ```
 
   **Example Response:**
