@@ -5,9 +5,9 @@ from app.weather import get_weather_data
 app = FastAPI()
 
 @app.get("/weather", response_model=WeatherResponse)
-async def weather(city: str):
+async def weather(city: str, target_date: str):
     try:
-        weather_data = get_weather_data(city)
+        weather_data = get_weather_data(city, target_date)
         return WeatherResponse(
             city=city,
             min_temp=weather_data["min_temp"],
