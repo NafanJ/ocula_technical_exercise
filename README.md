@@ -9,6 +9,14 @@ This project is a FastAPI-based web application that retrieves weather data for 
 - **Environment Variable Configuration**: The API key for OpenWeatherMap is securely managed through environment variables.
 - **Unit Testing**: The application includes unit tests to ensure the functionality of the API endpoints.
 
+## Live Demo
+A live version of this API is deployed on AWS Elastic Beanstalk.
+### Example Usage
+To get the weather data for London on 19th August 2024:
+```bash
+http://openweathermap-env.eba-2jrahwga.us-east-1.elasticbeanstalk.com/weather?city=London&target_date=2024-08-19
+```
+
 ## Project Structure
 
 ```
