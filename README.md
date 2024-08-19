@@ -1,13 +1,14 @@
 
 # Weather API Project
 
-This project is a FastAPI-based web application that retrieves weather data for a given city and returns the minimum, maximum, and average temperatures, along with the humidity. The weather data is fetched from the OpenWeatherMap API.
+This project is a FastAPI-based web application that retrieves weather data for a given city and date, and returns the minimum, maximum, and average temperatures, along with the humidity. The weather data is fetched from the OpenWeatherMap API.
 
 ## Features
 
 - **GET /weather**: Retrieve weather data (minimum, maximum, average temperature, and humidity) for a specified city and day.
 - **Environment Variable Configuration**: The API key for OpenWeatherMap is securely managed through environment variables.
 - **Unit Testing**: The application includes unit tests to ensure the functionality of the API endpoints.
+- **CI/CD**: Github Actions has been utilised to ensure continuous testing and deployment.
 
 ## Live Demo
 A live version of this API is deployed on AWS Elastic Beanstalk.
@@ -53,7 +54,7 @@ ocula_technical_exercise/
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-repository.git
+   git clone git@github.com:NafanJ/ocula_technical_exercise.git
    cd ocula_technical_exercise
    ```
 
