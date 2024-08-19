@@ -1,19 +1,31 @@
 
 # Weather API Project
 
-This project is a FastAPI-based web application that retrieves weather data for a given city and returns the minimum, maximum, and average temperatures, along with the humidity. The weather data is fetched from the OpenWeatherMap API.
+This project is a FastAPI-based web application that retrieves weather data for a given city and date, and returns the minimum, maximum, and average temperatures, along with the humidity. The weather data is fetched from the OpenWeatherMap API.
 
 ## Features
 
-- **GET /weather**: Retrieve weather data (minimum, maximum, average temperature, and humidity) for a specified city.
+- **GET /weather**: Retrieve weather data (minimum, maximum, average temperature, and humidity) for a specified city and day.
 - **Environment Variable Configuration**: The API key for OpenWeatherMap is securely managed through environment variables.
 - **Unit Testing**: The application includes unit tests to ensure the functionality of the API endpoints.
+- **CI/CD**: Github Actions has been utilised to ensure continuous testing and deployment.
+
+## Live Demo
+A live version of this API is deployed on AWS Elastic Beanstalk.
+### Example Usage
+To get the weather data for London on 24th August 2024:
+```bash
+http://openweathermap-env.eba-2jrahwga.us-east-1.elasticbeanstalk.com/weather?city=London&target_date=2024-08-24
+```
 
 ## Project Structure
 
 ```
 ocula_technical_exercise/
 │
+├── .github/
+│   ├── workflows/
+│      ├── weather-app.yml # Github Actions CI/CD
 ├── app/
 │   ├── __init__.py
 │   ├── main.py            # FastAPI application and API endpoint definitions
@@ -23,6 +35,7 @@ ocula_technical_exercise/
 │   ├── __init__.py
 │   └── test_weather.py    # Tests for the API endpoints
 ├── .gitignore             # Ignore unnecessary files in version control
+├── Procfile               # ElasticBeanstalk FastAPI Configuration
 ├── README.md              # Project documentation
 ├── requirements.txt       # Python dependencies
 └── .env                   # Environment variables (not included in version control)
@@ -41,7 +54,7 @@ ocula_technical_exercise/
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-repository.git
+   git clone git@github.com:NafanJ/ocula_technical_exercise.git
    cd ocula_technical_exercise
    ```
 
@@ -78,12 +91,16 @@ The application will be available at `http://127.0.0.1:8000`.
 
 ### API Usage
 
-- **GET /weather**: Retrieve weather data for a specific city.
+- **GET /weather**: Retrieve weather data for a specific city on a date.
+  **Query Parameters:**
+  - `city` (required): The name of the city for which you want to retrieve weather data.
+  - `target_date` (required): The date for which you want to retrieve weather data in the format `YYYY-MM-DD`.
+
 
   **Example Request:**
 
   ```
-  GET /weather?city=London
+  GET /weather?city=London&target_date=2024-08-19
   ```
 
   **Example Response:**
